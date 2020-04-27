@@ -1,0 +1,64 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+/*base*/
+.header {
+  min-height: 40px;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
+.main > div {
+  margin-top: 10px;
+}
+
+.footer {
+  min-height: 100px;
+  margin-top: 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-basis: 100%;
+  order: 1;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content {
+  display: flex;
+  flex-basis: 100%;
+  flex-direction: column;
+  min-height: 500px;
+}
+
+.small-content {
+  min-height: 200px;
+  flex-basis: 49%;
+}
+
+/*laptop*/
+@media screen and (min-width: 1000px) {
+  .main {
+    flex-wrap: nowrap;
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+  .sidebar {
+    flex-basis: 30%;
+    flex-direction: column;
+    order: 0;
+  }
+  .content {
+    flex-basis: 38%;
+  }
+}
+
+/*pad*/
+@media screen and (min-width: 500px) {
+}
